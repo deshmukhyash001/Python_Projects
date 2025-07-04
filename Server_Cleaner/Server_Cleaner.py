@@ -18,7 +18,7 @@ def CalculateChecksum(path, BlockSize = 1024):
 
     return hobj.hexdigest()
 
-def DirectoryWatcher(DirectoryName = "Marvellous"):
+def DirectoryWatcher(DirectoryName = "Base_Folder"):
 
     flag = os.path.isabs(DirectoryName)
 
@@ -47,7 +47,7 @@ def DirectoryWatcher(DirectoryName = "Marvellous"):
 
     timestamp = time.ctime()
 
-    filename = "MarvellousLog%s.log" %(timestamp)
+    filename = "Base_FolderLog%s.log" %(timestamp)
     filename = filename.replace(" ","_")
     filename = filename.replace(":","_")
 
@@ -56,7 +56,7 @@ def DirectoryWatcher(DirectoryName = "Marvellous"):
     Border = "-"*54
     
     fobj.write(Border+"\n")
-    fobj.write("This is a log file of Marvellous Automation Script\n")
+    fobj.write("This is a log file of Base_Folder Automation Script\n")
     fobj.write("This is a Driectory Cleaner Script\n")
 
     fobj.write(Border+"\n")
@@ -65,7 +65,7 @@ def DirectoryWatcher(DirectoryName = "Marvellous"):
     fobj.write("This is is created at \n"+timestamp+"\n")
     fobj.write(Border+"\n")
 
-def FindDuplicate(DirectoryName = "Marvellous"):
+def FindDuplicate(DirectoryName = "Base_Folder"):
 
     flag = os.path.isabs(DirectoryName)
 
@@ -112,7 +112,7 @@ def DisplayResult(MyDict):
         print("-------------------------------")
         Count = 0
 
-def DeleteDuplicate(Path = "Marvellous"):
+def DeleteDuplicate(Path = "Base_Folder"):
 
     MyDict = FindDuplicate(Path)
     Result = list(filter(lambda x : len(x) > 1, MyDict.values()))
@@ -134,7 +134,7 @@ def DeleteDuplicate(Path = "Marvellous"):
 def main():
     Border = "-"*54
     print(Border)
-    print("--------------- Marvellous Automation ----------------")
+    print("--------------- Base_Folder Automation ----------------")
     print(Border)
 
     if(len(sys.argv) == 2):
@@ -162,7 +162,7 @@ def main():
 
     print(Border)
     print("----------- Thank you for using our script -----------")
-    print("---------------- Marvellous Infosystems --------------")
+    print("---------------------- Base_Folder -------------------")
     print(Border)
 
 if __name__ == "__main__":
