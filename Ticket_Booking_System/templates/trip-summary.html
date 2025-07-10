@@ -19,6 +19,7 @@
         <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf4] px-10 py-3">
           <div class="flex items-center gap-4 text-[#0d141c]">
             <div class="size-4">
+
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill-rule="evenodd"
@@ -56,35 +57,32 @@
         </header>
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <form action="/invoice" method="post">
             <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight min-w-72">Trip Summary</p></div>
             <h3 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Traveler Information</h3>
             <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Name</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">Sophia Carter</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">{{Data["name"]}}</p>
               </div>
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Email</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">sophia.carter@email.com</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">{{Data["email"]}}</p>
               </div>
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Phone</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">+1-555-123-4567</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">{{Data["phone"]}}</p>
               </div>
             </div>
             <h3 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Itinerary</h3>
             <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Departure</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">New York, NY</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">{{Data["start_location"]}}</p>
               </div>
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Arrival</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">Los Angeles, CA</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
-                <p class="text-[#49739c] text-sm font-normal leading-normal">Stops</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">Chicago, IL, Denver, CO</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">{{Data["end_location"]}}</p>
               </div>
             </div>
             <h3 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Distance &amp; Cost</h3>
@@ -103,14 +101,13 @@
               </div>
             </div>
             <div class="flex px-4 py-3 justify-end">
-                <a href="./Trip_Invoice.html">
-              <button
+              <input type="submit"
                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#3d98f4] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]"
               >
                 <span class="truncate">Confirm Booking</span>
-              </button>
-              </a>
+            </input>
             </div>
+            </form>
           </div>
         </div>
       </div>

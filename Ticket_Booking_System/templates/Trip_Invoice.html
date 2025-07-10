@@ -63,42 +63,43 @@
             </div>
             <div class="flex flex-wrap justify-between gap-3 p-4">
               <div class="flex min-w-72 flex-col gap-3">
-                <p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight">Invoice #1234567890</p>
-                <p class="text-[#49739c] text-sm font-normal leading-normal">Issued on July 26, 2024</p>
+                <p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight">Invoice #{{Data["booking_id"]}}</p>
+                <p class="text-red300">We just send you your trip details to your email</p>
+                <p class="text-[#49739c] text-sm font-normal leading-normal">Issued on {{Data["issue_data_time"]}}</p>
               </div>
             </div>
             <h3 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Customer Information</h3>
             <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Name</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">Sophia Clark</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">{{Data["name"]}}</p>
               </div>
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Email</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">sophia.clark@email.com</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">{{Data["email"]}}</p>
               </div>
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Phone</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">+1 (555) 123-4567</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">+91 {{Data["phone"]}}</p>
               </div>
             </div>
             <h3 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Trip Details</h3>
             <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Booking Date</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">July 25, 2024</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">{{Data["start_date"]}}</p>
               </div>
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Pickup Location</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">123 Main Street, Anytown</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">{{Data["start_location"]}}</p>
               </div>
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Destination</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">456 Oak Avenue, Anytown</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">{{Data["end_location"]}}</p>
               </div>
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#cedbe8] py-5">
                 <p class="text-[#49739c] text-sm font-normal leading-normal">Distance</p>
-                <p class="text-[#0d141c] text-sm font-normal leading-normal">150 km</p>
+                <p class="text-[#0d141c] text-sm font-normal leading-normal">{{Data["end_location"]}}</p>
               </div>
             </div>
             <h3 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Charges</h3>
@@ -179,5 +180,9 @@
         </div>
       </div>
     </div>
+
+    <script>
+      alert("we just send you summary details to your email")
+    </script>
   </body>
 </html>
