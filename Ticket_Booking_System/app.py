@@ -64,17 +64,14 @@ def invoice():
     receiver = data["email"]
         
     border = "-"*50
-    subject = "Your trip has been generated"
+    subject = "Your trip has been generated\n\n"
     message = f'''
             Subject : {subject}
-            
-            
             Hello {data["name"]},
             
             You are starting your Journey from {data["start_location"]} to {data["end_location"]}
             starting in {data["start_date"]} 
             {border}
-            
             Thank you for choosing us : 
             | Contact us : 7350604040 | email : erdeshmukhyash@gmail.com |
     '''
